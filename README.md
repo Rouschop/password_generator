@@ -26,7 +26,8 @@ optional arguments:
   -n , --number         (Optional) Number of passwords
   --min                 (Optional) Minimal number of letters per word
   --max                 (Optional) Maximum number of letters per word
-  --list , --wordlist   (Optional) Define wordlist or use the provided one```
+  --list , --wordlist   (Optional) Define wordlist or use the provided one
+  ```
 
 
 ##See LICENSE_wordlist.txt for the license of wordlist.txt  Source: https://github.com/OpenTaal/opentaal-wordlist```
