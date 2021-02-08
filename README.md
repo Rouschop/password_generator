@@ -1,4 +1,5 @@
 Password generator to randomly generate a password from a list of words.
+
 Example usage:
 
 <p>
