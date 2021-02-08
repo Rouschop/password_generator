@@ -30,4 +30,4 @@ optional arguments:
   ```
 
 
-##See LICENSE_wordlist.txt for the license of wordlist.txt  Source: https://github.com/OpenTaal/opentaal-wordlist```
+##See LICENSE_wordlist.txt for the license of wordlist.txt  Source: https://github.com/OpenTaal/opentaal-wordlist
