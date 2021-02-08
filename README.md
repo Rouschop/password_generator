@@ -1,5 +1,9 @@
 Password generator to randomly generate a password from a list of words.
 
+To install:
+
+'''git clone https://github.com/Rouschop/password_generator.git'''
+
 Example usage:
 
 <p>
@@ -23,3 +27,6 @@ optional arguments:
   --min                 (Optional) Minimal number of letters per word
   --max                 (Optional) Maximum number of letters per word
   --list , --wordlist   (Optional) Define wordlist or use the provided one```
+
+
+#See LICENSE_wordlist.txt for the license of wordlist.txt  Source: https://github.com/OpenTaal/opentaal-wordlist
