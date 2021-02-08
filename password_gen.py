@@ -32,19 +32,19 @@ class colors:
     FAIL = '\033[91m' #RED
 
 
-def contains_digit(string):
+def contains_digit(string):  # Regex to check if word contains a numeral
     re_digit = re.compile(r'\d')
     if re.search(re_digit, string):
         return True
 
 
-def contains_quotes(string):
+def contains_quotes(string):  # Regex to check if word contains apostrophe or a dash
     re_symbol = re.compile(r"'|-")
     if re.search(re_symbol, string):
         return True
 
 
-def make_wordlist(read_lines=None):
+def make_wordlist(read_lines=None):  # Makes a list of words to use for password generation
     global minimum
     global maximum
     if read_lines is None:
@@ -58,7 +58,7 @@ def make_wordlist(read_lines=None):
                     cleaned_list.append(line[:-1])  # Append line to list without \n character
 
 
-def choose_random():
+def choose_random():  # Choose the words for the password randomly with secrets
     global words
     if words is None:
         words = 4
@@ -68,7 +68,7 @@ def choose_random():
     return password
 
 
-def print_passwords(count):
+def print_passwords(count):  # Print the password with one white space between each word
     if count is None:
         count = 1
     for i in range(count):
@@ -76,21 +76,25 @@ def print_passwords(count):
 
 
 if __name__ == '__main__':
-    if wordlist is None:
-        if path.exists('wordlist.txt'):
-            wordlist = 'wordlist.txt'
-        else:
-            print(colors.FAIL, "Wordlist not found, please specify a wordlist.")
-            raise FileNotFoundError(
-                errno.ENOENT, os.strerror(errno.ENOENT), wordlist)
-    if wordlist is not None:
-        if path.exists(wordlist):
-            with open(wordlist) as word_list:
-                new_line = word_list.readlines()
-                cleaned_list = []
-                make_wordlist()
-                print_passwords(count)
-        else:
-            print(colors.FAIL, "Path to wordlist is invalid, please specify a valid wordlist")
-            raise FileNotFoundError(
-                errno.ENOENT, os.strerror(errno.ENOENT), wordlist)
+    try:
+        if wordlist is None:
+            if path.exists('wordlist.txt'):  # If None wordlist is specified check if wordlist.txt exists
+                wordlist = 'wordlist.txt'
+            else:  # Raise FileNotFound error if no wordlist is specified and wordlist.txt doesnt exist
+                print(colors.FAIL, "Wordlist not found, please specify a wordlist.")
+                raise FileNotFoundError(
+                    errno.ENOENT, os.strerror(errno.ENOENT), wordlist)
+        if wordlist is not None:
+            if path.exists(wordlist):
+                with open(wordlist) as word_list:
+                    new_line = word_list.readlines()
+                    cleaned_list = []
+                    make_wordlist()
+                    print_passwords(count)
+            else:
+                print(colors.FAIL, "Path to wordlist is invalid, please specify a valid wordlist")
+                raise FileNotFoundError(
+                    errno.ENOENT, os.strerror(errno.ENOENT), wordlist)
+    except Exception as e:
+        print(colors.FAIL, "Unknown error, please report to ")
+        print(e)
