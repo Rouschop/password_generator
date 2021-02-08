@@ -10,7 +10,7 @@ import errno
 
 # Define Argument Parser
 parser = argparse.ArgumentParser(description='Generate a password from a list of words')
-parser.add_argument('-w', '--words', help='Number of words in your password', metavar='', required=False, type=int, dest='words')
+parser.add_argument('-w', '--words', help='(Optional) Number of words in your password', metavar='', required=False, type=int, dest='words')
 parser.add_argument('-n', '--number', help='(Optional) Number of passwords', metavar='', required=False, type=int, dest='count')
 parser.add_argument('--min', help='(Optional) Minimal number of letters per word', metavar='', required=False, type=int, dest='min')
 parser.add_argument('--max', help='(Optional) Maximum number of letters per word', metavar='', required=False, type=int, dest='max')
