@@ -8,14 +8,12 @@ Example usage:
 
 
 ```python3 password_gen.py```
-
 ```python3 password_gen.py	-w 4```
-
 ```python3 password_gen.py -w 4 --min 4 --max 10 ```
-
 ```python3 password_gen.py -w 4 --min 5 --max 9 -n 5 --list my_own_wordlist.txt```
  
-```usage: password_gen.py [-h] [-w] [-n] [--min] [--max] [--list]
+```
+usage: password_gen.py [-h] [-w] [-n] [--min] [--max] [--list]
 
 Generate a password from a list of words
 
