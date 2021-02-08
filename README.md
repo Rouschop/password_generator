@@ -2,7 +2,7 @@ Password generator to randomly generate a password from a list of words.
 
 To install:
 
-'''git clone https://github.com/Rouschop/password_generator.git'''
+```git clone https://github.com/Rouschop/password_generator.git```
 
 Example usage:
 
@@ -29,4 +29,4 @@ optional arguments:
   --list , --wordlist   (Optional) Define wordlist or use the provided one```
 
 
-```#See LICENSE_wordlist.txt for the license of wordlist.txt  Source: https://github.com/OpenTaal/opentaal-wordlist```
+##See LICENSE_wordlist.txt for the license of wordlist.txt  Source: https://github.com/OpenTaal/opentaal-wordlist```
