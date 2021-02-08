@@ -29,4 +29,6 @@ optional arguments:
   --list , --wordlist   (Optional) Define wordlist or use the provided one```
 
 
+
+
 #See LICENSE_wordlist.txt for the license of wordlist.txt  Source: https://github.com/OpenTaal/opentaal-wordlist
