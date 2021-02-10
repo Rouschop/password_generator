@@ -1,4 +1,4 @@
-Password generator to randomly generate a password from a list of words.
+Password generator to generate cryptographically secure passwords. It uses the secrets module which is used for generating cryptographically strong passwords.
 
 To install:
 
