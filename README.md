@@ -1,6 +1,6 @@
 Password generator to generate cryptographically secure passwords. It uses the secrets module which is used for generating cryptographically strong passwords.
 
-To install:
+Installation:
 
 '''git clone https://github.com/Rouschop/password_generator.git'''
 
