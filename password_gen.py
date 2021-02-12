@@ -84,6 +84,11 @@ if __name__ == '__main__':
         if wordlist is None:
             if path.exists('wordlist.txt'):  # If wordlist is not specified check if wordlist.txt exists
                 wordlist = 'wordlist.txt'
+                with open(wordlist) as word_list:  # Open wordlist; read lines; make a list of words; print password
+                    new_line = word_list.readlines()
+                    cleaned_list = []
+                    make_wordlist()
+                    print_passwords()
             else:  # Raise FileNotFound error if no wordlist is specified and wordlist.txt does not exist
                 print(Colors.FAIL, "Wordlist not found, please specify a wordlist.")
                 raise FileNotFoundError(
